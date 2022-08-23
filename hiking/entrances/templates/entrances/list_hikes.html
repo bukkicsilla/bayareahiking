@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Here is a list of all hikes.</h1>
+  <ul>
+    {% for hike in hikes  %}
+    <li>{{hike}}</li>
+    {% endfor %}
+  </ul>
+
+</div>
+{% endblock %}

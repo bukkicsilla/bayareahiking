@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Add a trail</h1>
+  <p>Add a new trail with the form below:</p>
+  <form method="POST">
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      {{ form.name.label }} {{ form.name() }}<br>
+      {{ form.entrance_id.label }} {{ form.entrance_id() }}<br>
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}
